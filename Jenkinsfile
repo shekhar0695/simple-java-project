@@ -29,7 +29,8 @@ pipeline {
         }
         stage('POST bUILD') {
             steps{
-                sh echo "This is a DEPLOY sttage"
+                sh 
+                echo "This is a POST BUILD stage"
             }
         }   
     }
