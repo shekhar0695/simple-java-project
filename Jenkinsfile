@@ -2,6 +2,9 @@ pipeline {
     agent any 
     stages{
         stage('BUILD') {
+            when {
+                branch 'master'
+            }
             steps{
                  sh '''
                     sleep 5
@@ -11,6 +14,9 @@ pipeline {
         }
 
         stage('TEST') {
+            when {
+                branch 'master'
+            }
             steps{
                 sh '''
                     sleep 6
@@ -20,6 +26,9 @@ pipeline {
         }
 
         stage('DEPLOY') {
+            when {
+                branch 'master'
+            }
             steps{
                 sh '''
                     sleep 5
@@ -28,6 +37,9 @@ pipeline {
             }
         }
         stage('POST BUILD') {
+            when {
+                branch 'master'
+            }
             steps{
                 sh 'echo "This is a POST BUILD stage"'  
             }
