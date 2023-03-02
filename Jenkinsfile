@@ -7,7 +7,7 @@ pipeline {
             }
             steps{
                  sh '''
-                    sleep 5
+                    mvn clean package
                     echo "This is a BUILD stage"
                 '''
             }
