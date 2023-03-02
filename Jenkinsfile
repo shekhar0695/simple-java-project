@@ -3,6 +3,9 @@ pipeline {
     parameters {
         string defaultValue: 'main', name: 'BRANCH', trim: true
     }
+    environment {
+        BRANCH_NAME = "${BRANCH}"
+    }    
     stages {
         stage('BUILD') {
             steps{
